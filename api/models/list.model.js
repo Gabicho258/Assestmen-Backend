@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
 const shemaLists = {
-  title: String,
-  description: String,
-  link: String,
+  name: String,
+  favs: Array,
+  user_id: String,
 };
 
 const List = mongoose.model("List", shemaLists, "lists");
