@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const shemaLists = {
   name: String,
-  favs: Array,
+  favs: { type: Array, default: [] },
   user_id: String,
 };
 
