@@ -11,7 +11,7 @@ export const isAuthenticated = (req, res, next) => {
       }
     });
   } else {
-    // Bad request
-    res.status(400).send();
+    // Bad request - No token found
+    res.status(400).json({ message: "No token provided" });
   }
 };
