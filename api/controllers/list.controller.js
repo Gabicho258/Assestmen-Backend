@@ -24,11 +24,11 @@ export const getListsByUser = async (req, res) => {
 export const deleteList = async (req, res) => {
   const { id: idList } = req.params;
   try {
-    const listToDelete = await Pet.findById(idList);
+    const listToDelete = await List.findById(idList);
     if (!listToDelete) {
       res.status(204).send({ error: "No list to delete" });
     } else {
-      const deletedList = await Pet.deleteOne(listToDelete);
+      const deletedList = await List.deleteOne(listToDelete);
       if (deletedList) res.status(200).json(deletedList);
     }
   } catch (error) {
