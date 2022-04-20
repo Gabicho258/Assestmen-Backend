@@ -21,6 +21,19 @@ export const getListsByUser = async (req, res) => {
   }
 };
 
+export const getListById = async (req, res) => {
+  try {
+    const { id: idList } = req.params;
+    const list = await List.findById(idList);
+    if (!list) {
+      return res.status(404).send();
+    }
+    res.json(list);
+  } catch (error) {
+    res.status(403).json({ error });
+  }
+};
+
 export const deleteList = async (req, res) => {
   const { id: idList } = req.params;
   try {
