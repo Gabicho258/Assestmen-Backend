@@ -1,8 +1,7 @@
 import { List } from "../models/index.js";
 
 export const createList = async (req, res) => {
-  const { id: user_id } = req.params;
-  const { name } = req.body;
+  const { name, user_id } = req.body;
   const newList = new List({ name, user_id });
   try {
     await newList.save();
