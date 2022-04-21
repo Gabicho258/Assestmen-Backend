@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "c7608c9f-a048-475e-b0f5-56c905af38a6",
+		"name": "Favs API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"prueba@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://favs-api.herokuapp.com/auth/local/login",
+							"protocol": "https",
+							"host": [
+								"favs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"local",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://favs-api.herokuapp.com/auth/local/register",
+							"protocol": "https",
+							"host": [
+								"favs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"local",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "List",
+			"item": [
+				{
+					"name": "Get Lists By User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYUBnbWFpbC5jb20iLCJpZCI6IjYyNWFmMzJmNmRjNzAwM2VlMjNmNWE1ZCIsImlhdCI6MTY1MDEzNTk5NX0._jBux_AIZu5CXJsi5hAS-6S7nQRq-o2aLCr695NprhY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://favs-api.herokuapp.com/api/list/user/625af32f6dc7003ee23f5a5d",
+							"protocol": "https",
+							"host": [
+								"favs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"list",
+								"user",
+								"625af32f6dc7003ee23f5a5d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create List",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYUBnbWFpbC5jb20iLCJpZCI6IjYyNWFmMzJmNmRjNzAwM2VlMjNmNWE1ZCIsImlhdCI6MTY1MDEzNTk5NX0._jBux_AIZu5CXJsi5hAS-6S7nQRq-o2aLCr695NprhY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"625af32f6dc7003ee23f5a5d\",\r\n    \"name\": \"My Last List\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://favs-api.herokuapp.com/api/list/create",
+							"protocol": "https",
+							"host": [
+								"favs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"list",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete List",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYUBnbWFpbC5jb20iLCJpZCI6IjYyNWFmMzJmNmRjNzAwM2VlMjNmNWE1ZCIsImlhdCI6MTY1MDQ4Nzk4MX0.aNfLx9uvpEKbILXAha1ewmCOnTRlH4itcEzoAaAEJfI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://favs-api.herokuapp.com/api/list/delete/6261b52cd9d68c30a9b48309",
+							"protocol": "https",
+							"host": [
+								"favs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"list",
+								"delete",
+								"6261b52cd9d68c30a9b48309"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYUBnbWFpbC5jb20iLCJpZCI6IjYyNWFmMzJmNmRjNzAwM2VlMjNmNWE1ZCIsImlhdCI6MTY1MDEzNTk5NX0._jBux_AIZu5CXJsi5hAS-6S7nQRq-o2aLCr695NprhY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://favs-api.herokuapp.com/api/list/626071c1ec673cc54b8f7a85",
+							"protocol": "https",
+							"host": [
+								"favs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"list",
+								"626071c1ec673cc54b8f7a85"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Fav To List",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYUBnbWFpbC5jb20iLCJpZCI6IjYyNWFmMzJmNmRjNzAwM2VlMjNmNWE1ZCIsImlhdCI6MTY1MDEzNTk5NX0._jBux_AIZu5CXJsi5hAS-6S7nQRq-o2aLCr695NprhY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Second list's fav 10\",\r\n    \"description\": \"This is a description\",\r\n    \"link\": \"www.google.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://favs-api.herokuapp.com/api/fav/add/626071c1ec673cc54b8f7a85",
+							"protocol": "https",
+							"host": [
+								"favs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"fav",
+								"add",
+								"626071c1ec673cc54b8f7a85"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Fav From List",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBydWViYUBnbWFpbC5jb20iLCJpZCI6IjYyNWFmMzJmNmRjNzAwM2VlMjNmNWE1ZCIsImlhdCI6MTY1MDEzNTk5NX0._jBux_AIZu5CXJsi5hAS-6S7nQRq-o2aLCr695NprhY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://favs-api.herokuapp.com/api/fav/delete/626071c1ec673cc54b8f7a85",
+							"protocol": "https",
+							"host": [
+								"favs-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"fav",
+								"delete",
+								"626071c1ec673cc54b8f7a85"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
