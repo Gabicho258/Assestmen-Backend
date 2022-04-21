@@ -53,6 +53,19 @@ export const getListById = async (req, res) => {
   }
 };
 
+export const deleteFavFromList = async (req, res) => {
+  const { id: idList } = req.params;
+  const { id: idFav } = req.body;
+  try {
+    const list = await List.findById(idList);
+    const favToDeletePosition = list.favs.findIndex((f) => f.id === idFav);
+    list.favs.splice(favToDeletePosition, 1);
+    await list.save();
+    res.status(200).json(list);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+};
 export const deleteList = async (req, res) => {
   const { id: idList } = req.params;
   try {
