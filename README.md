@@ -8,12 +8,12 @@
 
 ## Run the app
 
-    npm start
-<!-- 
+    npm start  
+
 ## Run the tests
 
-    ./run-tests.sh
- -->
+    npm test
+
 # REST API
 
 The REST API is described below.
