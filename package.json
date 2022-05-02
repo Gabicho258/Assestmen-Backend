@@ -2,16 +2,19 @@
   "name": "favps-api",
   "version": "1.0.0",
   "description": "",
-  "type":"module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "test": "jest --runInBand ",
+    "server-test": "set NODE_ENV=test&& nodemon server.js",
+    "start": "nodemon server.js",
+    "dev": "set NODE_ENV=dev&& nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
@@ -19,5 +22,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.10",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
+    "jest": "^28.0.3"
   }
 }

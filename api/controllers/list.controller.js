@@ -26,11 +26,8 @@ export const addFavToList = async (req, res) => {
     const { id: idList } = req.params;
     const favToAdd = req.body;
     const list = await List.findById(idList);
-    console.log(list);
-    console.log(list.favs.length + ".asdasd");
     const id =
       list.favs.length === 0 ? 0 : list.favs[list.favs.length - 1].id + 1;
-    console.log("breakpoint");
 
     list.favs.push({ id, ...favToAdd });
     await list.save();
