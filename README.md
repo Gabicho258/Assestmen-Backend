@@ -2,6 +2,10 @@
 
 `https://favs-api.herokuapp.com`
 
+## Node version
+
+    v16.13.2
+
 ## Install dependencies
 
     npm install
@@ -10,9 +14,17 @@
 
     npm start  
 
+## Initialize dev server
+
+    npm run dev  
+
 ## Run the tests
 
-    npm test
+    npm run test
+
+## Initialize test server 
+
+    npm run server-test  
 
 # REST API
 
