@@ -10,9 +10,17 @@
 
     npm start  
 
+## Initialize dev server
+
+    npm run dev  
+
 ## Run the tests
 
-    npm test
+    npm run test
+
+## Initialize test server 
+
+    npm run server-test  
 
 # REST API
 
