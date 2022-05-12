@@ -2,6 +2,10 @@
 
 `https://favs-api.herokuapp.com`
 
+## Node version
+
+    v16.13.2
+
 ## Install dependencies
 
     npm install
